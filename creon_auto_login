@@ -1,0 +1,19 @@
+def autorun():
+app = application.Application()
+app.start("C:\CREON\STARTER\coStarter.exe //prj:c /id:(아이디) /pwd:(비번) /pwdcert:(공인인증비번) /autostart")
+
+(빨간색 처리된 C 대신 cp를 입력하면 크레온 Plus가 실행)
+
+
+/////
+from pywinauto import application
+from pywinauto import timings
+import time
+import os
+
+app = application.Application()
+app.start('C:\CREON\STARTER\coStarter.exe /prj:c /id:xxx /pwd:yyyy /pwdcert:zzzzz /autostart')
+
+time.sleep(50)
+
+os.system("taskkill /im coStarter.exe")
